@@ -2,14 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
+  
+  <!-- Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-62DE15HYK6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-62DE15HYK6');
+  </script>
+
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="F3: Fast Feature Field - A Predictive Representation of Events.">
+  <meta property="og:title" content="F3: Fast Feature Field"/>
+  <meta property="og:description" content="F3: Fast Feature Field - A Predictive Representation of Events"/>
+  <meta property="og:url" content="https://seas.upenn.edu/~richeek/f3"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -20,11 +32,11 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="event cameras, neuromorphic vision, depth estimation, optical flow, semantic segmentation, robotics, computer vision, machine learning, hash encoding, deep sets">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Fast Feature Field (F3)</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,68 +64,79 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Fast Feature Field (F<sup>3</sup>): A Predictive Representation of Events</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="http://seas.upenn.edu/~richeek/" target="_blank">Richeek Das</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://www.cis.upenn.edu/~kostas/" target="_blank">Kostas Daniilidis</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://pratikac.github.io/" target="_blank">Pratik Chaudhari</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">GRASP Laboratory, University of Pennsylvania</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+
+                      <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2509.25146.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
-                      </a>
-                    </span>
+                        </a>
+                      </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
                       <span>Supplementary</span>
+                      </a>
+                    </span> -->
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2509.25146" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
                     </a>
                   </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/grasp-lyrl/fast-feature-fields" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+
+                  <!-- Coming Soon Video Link -->
+                    <span class="link-block"></span>
+                    <a href="#" class="external-link button is-normal is-rounded is-dark" style="pointer-events: none; opacity: 0.6;">
+                      <span class="icon">
+                      <i class="fas fa-video"></i>
+                      </span>
+                      <span>Video (<span style="color: red;">Coming Soon!</span>)</span>
+                    </a>
+                    </span>
             </div>
           </div>
         </div>
@@ -124,12 +147,12 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <!-- <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -137,8 +160,18 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
+
+<!-- Figure 1 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <img src="static/images/figure1/figure1.webp" alt="F3 Overview Figure">
+    </div>
+  </div>
+</section>
+<!-- End Figure 1 -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +181,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            This paper develops a mathematical argument and algorithms for building representations of data from event-based cameras, that we call Fast Feature Field (F<sup>3</sup>). We learn this representation by predicting future events from past events and show that it preserves scene structure and motion information. F<sup>3</sup> exploits the sparsity of event data and is robust to noise and variations in event rates. It can be computed efficiently using ideas from multi-resolution hash encoding and deep sets—achieving 120 Hz at HD and 440 Hz at VGA resolutions. F<sup>3</sup> represents events within a contiguous spatiotemporal volume as a multi-channel image, enabling a range of downstream tasks. We obtain state-of-the-art performance on optical flow estimation, semantic segmentation, and monocular metric depth estimation, on data from three robotic platforms (a car, a quadruped robot and a flying platform), across different lighting conditions (daytime, nighttime), environments (indoors, outdoors, urban, as well as off-road) and dynamic vision sensors (resolutions and event rates). Our implementations can predict these tasks at 25-75 Hz at HD resolution.
           </p>
         </div>
       </div>
@@ -162,33 +195,100 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">F<sup>3</sup> can be used for any task</h2>
+      <p>It possible to use F<sup>3</sup>  in any standard computer vision algorithm or neural architecture built for RGB data. F<sup>3</sup> can be the foundation for a variety of robotic perception tasks. We show state-of-the-art performance on data from three platforms (driving, quadruped locomotion and a flying platform) and four tasks (supervised semantic segmentation, unsupervised optical flow, unsupervised stereo matching, and supervised monocular metric depth estimation).</p>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/depth/monocular_depth.webp" alt="Monocular Depth Estimation"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Monocular Depth Estimation.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/seg/segmentation.webp" alt="Semamtic Segmentation"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Semantic Segmentation.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/flow/flow.webp" alt="Optical Flow Estimation"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Unsupervised Optical Flow Estimation.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/stereo/stereo_depth.webp" alt="Stereo Disparity with Events"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Stereo Disparity from stereo events without any learning!
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Overview section -->
+<section class="section hero">
+  <div class="container">
+        <h2 class="title is-3">F<sup>3</sup> architecture is designed specifically for events</h2>
+        <div class="content">
+          <p>
+            F<sup>3</sup> is a predictive representation of events. It is a statistic of past events sufficient to predict future events. We prove that such a representation retains information about the structure and motion in the scene. F<sup>3</sup> achieves low-latency computation by exploiting the sparsity of event data using a multi-resolution hash encoder and permutation-invariant architecture.  Our implementation can compute F<sup>3</sup> at 120 Hz and 440 Hz at HD and VGA resolutions, respectively, and can predict different downstream tasks at 25-75 Hz at HD resolution. These HD inference rates are roughly 2-5 times faster than the current state-of-the-art event-based methods. Please refer to the <a href="https://arxiv.org/abs/2509.25146" target="_blank"><strong>paper</strong></a> for more details.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-three-quarters">
+            <img src="static/images/architecture/arch.webp" alt="F3 Overview Diagram">
+            <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">
+              An overview of the neural architecture for Fast Feature Field (F<sup>3</sup>).
+            </p>
+          </div>
+        </div>
+  </div>
+</section>
+<!-- End overview section -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">F<sup>3</sup> is robust</h2>
+      <p>F<sup>3</sup>-based approaches work robustly without additional training across data from different robotic platforms, lighting and environmental conditions (daytime vs. night-time, indoors vs. outdoors, urban vs. off-road) and dynamic vision sensors (with different resolutions and event rates).</p>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/robustness/spot_falcon.webp" alt="Robustness to Robotic Platforms"/>
+        <h2 class="subtitle has-text-centered">
+          Different robotic platforms: trained on a car, works on a quadruped robot (Spot) and a flying platform (Falcon).
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/robustness/car_nighttime.webp" alt="Robustness to Lighting"/>
+        <h2 class="subtitle has-text-centered">
+          Extreme changes in lighting: trained on daytime, works at nighttime.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/robustness/car_m3ed2dsec.webp" alt="Robustness to sensor in use"/>
+        <h2 class="subtitle has-text-centered">
+          Different event cameras: trained on an HD event vision sensor, works on a VGA sensor.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/robustness/car_forest.webp" alt="Robustness to environments"/>
+      <h2 class="subtitle has-text-centered">
+        Highly differing environments: trained on urban driving sequences, works off-road in a forest. <br>
+        <span style="font-size: 1rem;">(Like the scene in the first image row, it is often difficult to discern the branches of the closer tree from the background using RGB images, <br> but the motion information in events makes it doable. F<sup>3</sup> helps us extract this kind of structural information from events much more easily.)</span>
       </h2>
     </div>
   </div>
@@ -201,57 +301,57 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
+<!-- <section class="hero is-small is-light"> -->
+  <!-- <div class="hero-body"> -->
+    <!-- <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+      <!-- <h2 class="title is-3">Video Presentation</h2> -->
+      <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
           
-          <div class="publication-video">
+          <!-- <div class="publication-video"> -->
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
+            <!-- <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <!-- <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
+            <!-- <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -260,7 +360,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,7 +370,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -278,7 +378,15 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{das2025fastfeaturefield,
+  title={Fast Feature Field ($\text{F}^3$): A Predictive Representation of Events}, 
+  author={Richeek Das and Kostas Daniilidis and Pratik Chaudhari},
+  year={2025},
+  eprint={2509.25146},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2509.25146},
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -308,5 +416,5 @@
 
     <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>

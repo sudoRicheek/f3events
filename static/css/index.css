@@ -120,6 +120,19 @@ body {
   padding: 20px;
   font-size: 0;
 }
+.results-carousel .item img {
+  width:90%; /* Make images smaller - 80% of container width */
+  height: auto; /* Maintain aspect ratio */
+  /* max-width: 600px; Set a maximum width limit */
+  margin: auto; /* Center the images horizontally and vertically */
+  display: block; /* Ensure block display for centering */
+}
+
+.results-carousel .item .subtitle {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
 
 .results-carousel video {
   margin: 0;
@@ -127,6 +140,22 @@ body {
 
 .slider-pagination .slider-page {
   background: #000000;
+}
+
+.slider-pagination .slider-page.is-active,
+.slider-pagination .slider-page:hover {
+  transform: scale(1.6) !important; /* Increased scale effect */
+}
+
+/* Navigation arrows - make them bigger too */
+.slider-navigation-next,
+.slider-navigation-previous {
+  width: 5rem !important; /* Increased from default 42px */
+  height: 3.5rem !important; /* Increased from default 42px */
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  background-size: 24px 24px !important; /* Bigger arrow icons */
+  border: 4px solid #696969 !important; /* White border */
 }
 
 .eql-cntrb { 
