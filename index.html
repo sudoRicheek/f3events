@@ -129,14 +129,14 @@
                   </span>
 
                   <!-- Coming Soon Video Link -->
-                    <span class="link-block"></span>
+                  <span class="link-block">
                     <a href="#" class="external-link button is-normal is-rounded is-dark" style="pointer-events: none; opacity: 0.6;">
                       <span class="icon">
-                      <i class="fas fa-video"></i>
+                        <i class="fas fa-video"></i>
                       </span>
                       <span>Video (<span style="color: red;">Coming Soon!</span>)</span>
                     </a>
-                    </span>
+                  </span>
             </div>
           </div>
         </div>
@@ -191,51 +191,104 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">F<sup>3</sup> can be used for any task</h2>
-      <p>It possible to use F<sup>3</sup>  in any standard computer vision algorithm or neural architecture built for RGB data. F<sup>3</sup> can be the foundation for a variety of robotic perception tasks. We show state-of-the-art performance on data from three platforms (driving, quadruped locomotion and a flying platform) and four tasks (supervised semantic segmentation, unsupervised optical flow, unsupervised stereo matching, and supervised monocular metric depth estimation).</p>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/depth/monocular_depth.webp" alt="Monocular Depth Estimation"/>
-        <h2 class="subtitle has-text-centered">
-          Monocular Depth Estimation.
+      <div class="container">
+        <h2 class="title is-3">F<sup>3</sup> can be used for many different tasks</h2>
+        <p style="margin-bottom: 2rem;"></pstyle>It is possible to use F<sup>3</sup> in any standard computer vision algorithm or neural architecture built for RGB data. F<sup>3</sup> can be the foundation for a variety of robotic perception tasks. We show state-of-the-art performance on data from three platforms (driving, quadruped locomotion and a flying platform) and four tasks (supervised semantic segmentation, unsupervised optical flow, unsupervised stereo matching, and supervised monocular metric depth estimation). These sequences showcase F<sup>3</sup> performing multiple perception tasks simultaneously—demonstrating its versatility as a foundation for robotic perception.</p>
+      </div>
+      
+      <div class="container is-max-desktop">
+        <video poster="" id="overview_combined" autoplay muted loop height="100%">
+          <source src="static/videos/overview_combined.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <strong>Overview:</strong> Driving scenes in Philadelphia demonstrating multi-task capabilities in urban environments
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/seg/segmentation.webp" alt="Semamtic Segmentation"/>
-        <h2 class="subtitle has-text-centered">
-          Semantic Segmentation.
-        </h2>
+
+      <div class="container" style="margin-top: 2rem;">
+        <p><strong>F<sup>3</sup> manages to realize the benefits of event cameras in low-latency and low-light scenarios, especially where standard RGB cameras struggle. </strong> Moving objects like pedestrians and vehicles are captured reliably in events even under challenging lighting conditions. See examples below:</p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/flow/flow.webp" alt="Optical Flow Estimation"/>
-        <h2 class="subtitle has-text-centered">
-         Unsupervised Optical Flow Estimation.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/stereo/stereo_depth.webp" alt="Stereo Disparity with Events"/>
-      <h2 class="subtitle has-text-centered">
-        Stereo Disparity from stereo events without any learning!
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
+      <!-- Highlighted Scenarios -->
+      <div class="container" style="margin-top: 2rem;">
+        <div class="scenario-nav">
+          <button class="scenario-btn active" onclick="showScenario('pedestrians-highlighted')" style="font-size: 1.5em; padding: 10px 20px;">
+            F<sup>3</sup> spots pedestrians when RGB can't
+          </button>
+          <button class="scenario-btn" onclick="showScenario('structure-motion-highlighted')" style="font-size: 1.5em; padding: 10px 20px;">
+            F<sup>3</sup> captures fine structure and motion
+          </button>
+        </div>
+        <div class="scenario-carousel-container">
+          <!-- Pedestrians Scenario -->
+          <div id="scenario-pedestrians-highlighted" class="scenario-content active">
+            <div class="carousel results-carousel">
+              <div class="item">
+                <video poster="" id="night2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/night2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
+                  <strong>Nighttime:</strong> Extreme low-light conditions
+                </h2>
+              </div>
+              
+              <div class="item">
+                <video poster="" id="ucity1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/ucity1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
+                  <strong>Urban Scene:</strong> University City
+                </h2>
+              </div>
+              <div class="item">
+                <video poster="" id="rittenhouse3" autoplay controls muted loop height="100%">
+                  <source src="static/videos/rittenhouse3.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
+                  <strong>Urban Scene:</strong> Rittenhouse Square - High dynamic range
+                </h2>
+              </div>
+            </div>
+          </div>
+          <!-- Structure and Motion Scenario -->
+          <div id="scenario-structure-motion-highlighted" class="scenario-content">
+            <div class="carousel results-carousel">
+              <div class="item">
+                <video poster="" id="rittenhouse2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/rittenhouse2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
+                  <strong>Urban Scene:</strong> Rittenhouse Square - Dense pedestrian traffic
+                </h2>
+              </div>
+              
+              <div class="item">
+                <video poster="" id="cityhall2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/cityhall2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
+                  <strong>Urban Scene:</strong> City Hall - Complex urban intersection
+                </h2>
+              </div>
+              
+              <div class="item">
+                <video poster="" id="highway1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/highway1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
+                  <strong>Highway Scene:</strong> High-speed driving scenario
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- Overview section -->
-<section class="section hero">
-  <div class="container">
+      <!-- Architecture subsection -->
+      <div class="container" style="margin-top: 3rem;">
         <h2 class="title is-3">F<sup>3</sup> architecture is designed specifically for events</h2>
         <div class="content">
           <p>
@@ -250,42 +303,267 @@
             </p>
           </div>
         </div>
+      </div>
+
+      <!-- Specific scenarios subsection -->
+      <div class="container" style="margin-top: 3rem;">
+        <h2 class="title is-3">F<sup>3</sup> is robust</h2>
+        <p style="margin-bottom: 2rem;">F<sup>3</sup>-based approaches work robustly without additional training across data from different robotic platforms, lighting and environmental conditions (daytime vs. night-time, indoors vs. outdoors, urban vs. off-road) and dynamic vision sensors (with different resolutions and event rates). <strong>See examples of F<sup>3</sup> generalizing to different</strong></p> 
+        
+        <!-- Scenario Navigation Buttons -->
+        <div class="scenario-nav">
+          <button class="scenario-btn active" onclick="showScenario('lighting')" style="font-size: 1.1em">
+            Lighting conditions
+          </button>
+          <button class="scenario-btn" onclick="showScenario('environments')" style="font-size: 1.1em">
+            Environments (City to Forest)
+          </button>
+          <button class="scenario-btn" onclick="showScenario('robots')" style="font-size: 1.1em">
+            Robot platforms (Car to Quadruped/Drone)
+          </button>
+          <button class="scenario-btn" onclick="showScenario('sensors')" style="font-size: 1.1em">
+            Event vision sensors (HD to VGA)
+          </button>
+        </div>
+
+        <!-- Single Carousel Container that changes content -->
+        <div class="scenario-carousel-container">
+          
+          <!-- Lighting Scenario -->
+          <div id="scenario-lighting" class="scenario-content active">
+            <div class="carousel results-carousel">
+              <div class="item">
+                <video poster="" id="night1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/night1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Nighttime:</strong> Low-light urban driving (demonstrates event camera advantages)
+                </h2>
+              </div>
+<!-- 
+              <div class="item">
+                <video poster="" id="night2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/night2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Nighttime:</strong> Extreme low-light conditions
+                </h2>
+              </div> -->
+
+              <div class="item">
+                <video poster="" id="tunnel1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/tunnel1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Tunnel:</strong> Rapid lighting transitions (high dynamic range)
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Environments Scenario -->
+          <div id="scenario-environments" class="scenario-content">
+            <div class="carousel results-carousel">
+              <!-- <div class="item">
+                <video poster="" id="forest1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/forest1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Off-Road:</strong> Forest environment (trained on urban, generalizes to off-road)
+                </h2>
+              </div> -->
+
+              <div class="item">
+                <video poster="" id="forest2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/forest2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Off-Road:</strong> Dense forest with complex motion patterns
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="forest3" autoplay controls muted loop height="100%">
+                  <source src="static/videos/forest3.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Off-Road:</strong> Forest scene with challenging structure extraction
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Robots Scenario -->
+          <div id="scenario-robots" class="scenario-content">
+            <div class="carousel results-carousel">
+              <div class="item">
+                <video poster="" id="spot1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/spot1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Platform:</strong> Spot Quadruped Robot (cross-platform generalization)
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="spot2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/spot2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Platform:</strong> Spot - Indoor navigation
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="spot3" autoplay controls muted loop height="100%">
+                  <source src="static/videos/spot3.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Platform:</strong> Spot - Complex indoor environment
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="falcon1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/falcon1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Platform:</strong> Falcon Flying Platform (aerial perspective)
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="falcon2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/falcon2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>Platform:</strong> Falcon - Rapid motion and altitude changes
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sensors Scenario -->
+          <div id="scenario-sensors" class="scenario-content">
+            <div class="carousel results-carousel">
+              <div class="item">
+                <video poster="" id="dsec1" autoplay controls muted loop height="100%">
+                  <source src="static/videos/dsec1.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>DSEC Dataset:</strong> Benchmark scenario 1
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="dsec2" autoplay controls muted loop height="100%">
+                  <source src="static/videos/dsec2.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>DSEC Dataset:</strong> Benchmark scenario 2
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="dsec3" autoplay controls muted loop height="100%">
+                  <source src="static/videos/dsec3.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>DSEC Dataset:</strong> Benchmark scenario 3
+                </h2>
+              </div>
+
+              <div class="item">
+                <video poster="" id="dsec4" autoplay controls muted loop height="100%">
+                  <source src="static/videos/dsec4.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>DSEC Dataset:</strong> Benchmark scenario 4
+                </h2>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
   </div>
 </section>
-<!-- End overview section -->
+<!-- End video carousel -->
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">F<sup>3</sup> can be used for many different tasks</h2>
+      <p>It possible to use F<sup>3</sup>  in any standard computer vision algorithm or neural architecture built for RGB data. F<sup>3</sup> can be the foundation for a variety of robotic perception tasks. We show state-of-the-art performance on data from three platforms (driving, quadruped locomotion and a flying platform) and four tasks (supervised semantic segmentation, unsupervised optical flow, unsupervised stereo matching, and supervised monocular metric depth estimation).</p>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/depth/monocular_depth.webp" alt="Monocular Depth Estimation"/>
+        <h2 class="subtitle has-text-centered">
+          Monocular Depth Estimation.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/seg/segmentation.webp" alt="Semamtic Segmentation"/>
+        <h2 class="subtitle has-text-centered">
+          Semantic Segmentation.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/flow/flow.webp" alt="Optical Flow Estimation"/>
+        <h2 class="subtitle has-text-centered">
+         Unsupervised Optical Flow Estimation.
+       </h2>
+     </div>
+     <div class="item"> -->
+      <!-- Your image here -->
+      <!-- <img src="static/images/stereo/stereo_depth.webp" alt="Stereo Disparity with Events"/>
+      <h2 class="subtitle has-text-centered">
+        Stereo Disparity from stereo events without any learning!
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">F<sup>3</sup> is robust</h2>
       <p>F<sup>3</sup>-based approaches work robustly without additional training across data from different robotic platforms, lighting and environmental conditions (daytime vs. night-time, indoors vs. outdoors, urban vs. off-road) and dynamic vision sensors (with different resolutions and event rates).</p>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+       <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/robustness/spot_falcon.webp" alt="Robustness to Robotic Platforms"/>
+        <!-- <img src="static/images/robustness/spot_falcon.webp" alt="Robustness to Robotic Platforms"/>
         <h2 class="subtitle has-text-centered">
           Different robotic platforms: trained on a car, works on a quadruped robot (Spot) and a flying platform (Falcon).
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/robustness/car_nighttime.webp" alt="Robustness to Lighting"/>
+        <!-- <img src="static/images/robustness/car_nighttime.webp" alt="Robustness to Lighting"/>
         <h2 class="subtitle has-text-centered">
           Extreme changes in lighting: trained on daytime, works at nighttime.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/robustness/car_m3ed2dsec.webp" alt="Robustness to sensor in use"/>
+        <!-- <img src="static/images/robustness/car_m3ed2dsec.webp" alt="Robustness to sensor in use"/>
         <h2 class="subtitle has-text-centered">
           Different event cameras: trained on an HD event vision sensor, works on a VGA sensor.
        </h2>
      </div>
-     <div class="item">
+     <div class="item"> -->
       <!-- Your image here -->
-      <img src="static/images/robustness/car_forest.webp" alt="Robustness to environments"/>
+      <!-- <img src="static/images/robustness/car_forest.webp" alt="Robustness to environments"/>
       <h2 class="subtitle has-text-centered">
         Highly differing environments: trained on urban driving sequences, works off-road in a forest. <br>
         <span style="font-size: 1rem;">(Like the scene in the first image row, it is often difficult to discern the branches of the closer tree from the background using RGB images, <br> but the motion information in events makes it doable. F<sup>3</sup> helps us extract this kind of structural information from events much more easily.)</span>
@@ -294,69 +572,8 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light"> -->
-  <!-- <div class="hero-body"> -->
-    <!-- <div class="container"> -->
-      <!-- Paper video. -->
-      <!-- <h2 class="title is-3">Video Presentation</h2> -->
-      <!-- <div class="columns is-centered has-text-centered"> -->
-        <!-- <div class="column is-four-fifths"> -->
-          
-          <!-- <div class="publication-video"> -->
-            <!-- Youtube embed code here -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
-
-
-
-
 
 
 <!-- Paper poster -->

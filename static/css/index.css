@@ -112,6 +112,7 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  padding: 0 1rem !important;
 }
 
 .results-carousel .item {
@@ -150,16 +151,210 @@ body {
 /* Navigation arrows - make them bigger too */
 .slider-navigation-next,
 .slider-navigation-previous {
-  width: 5rem !important; /* Increased from default 42px */
-  height: 3.5rem !important; /* Increased from default 42px */
-  margin-left: 0.5rem !important;
-  margin-right: 0.5rem !important;
-  background-size: 24px 24px !important; /* Bigger arrow icons */
-  border: 4px solid #696969 !important; /* White border */
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 3px solid #fff !important;
+  color: #fff !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  background-size: 30px 30px !important;
+  opacity: 0.9 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.slider-navigation-next:hover,
+.slider-navigation-previous:hover {
+  opacity: 1 !important;
+  background: rgba(0, 0, 0, 0.9) !important;
 }
 
 .eql-cntrb { 
   font-size: smaller;
+}
+
+/* Tab content styling */
+.tab-content {
+  display: none;
+}
+
+.tab-content.is-active {
+  display: block;
+}
+
+/* Accordion Styles */
+.accordion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.accordion-section {
+  margin-bottom: 1rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.accordion-section:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.5rem;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: #eeeeee;
+}
+
+.accordion-header.active {
+  background: #e8e8e8;
+}
+
+.accordion-title {
+  flex: 1;
+  color: #363636;
+}
+
+.accordion-icon {
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+  color: #4a4a4a;
+  font-size: 1rem;
+}
+
+.accordion-header.active .accordion-icon {
+  transform: rotate(-180deg);
+}
+
+.accordion-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-content.active {
+  max-height: 5000px;
+  padding: 2rem 1.5rem;
+}
+
+/* For initial state - first section open by default */
+.accordion-section:first-child .accordion-content {
+  max-height: 5000px;
+  padding: 2rem 1.5rem;
+}
+
+.accordion-section:first-child .accordion-header {
+  background: #e8e8e8;
+}
+
+.accordion-section:first-child .accordion-icon {
+  transform: rotate(-180deg);
+}
+
+/* Scenario Navigation Styles */
+.scenario-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.scenario-btn {
+  padding: 1rem 1.5rem;
+  background: #f5f5f5;
+  border: 2px solid #dbdbdb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #363636;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 200px;
+}
+
+.scenario-btn:hover {
+  background: #e8e8e8;
+  border-color: #b5b5b5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.scenario-btn.active {
+  background: #3273dc;
+  color: white;
+  border-color: #3273dc;
+  box-shadow: 0 4px 12px rgba(50, 115, 220, 0.3);
+}
+
+.scenario-btn.active:hover {
+  background: #2366d1;
+  border-color: #2366d1;
+}
+
+/* Scenario Carousel Container */
+.scenario-carousel-container {
+  position: relative;
+  min-height: 600px;
+  margin-top: 2rem;
+}
+
+.scenario-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.scenario-content.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness for scenario buttons */
+@media screen and (max-width: 768px) {
+  .scenario-btn {
+    min-width: 100%;
+    font-size: 0.9rem;
+    padding: 0.85rem 1rem;
+  }
+  
+  .scenario-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 
