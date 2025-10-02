@@ -2,20 +2,28 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 // Scenario switching function
 function showScenario(scenarioId) {
-    // Hide all scenario contents
-    const allScenarios = document.querySelectorAll('.scenario-content');
+    // Find the nav containing the clicked button
+    const nav = event.target.closest('.scenario-nav');
+    if (!nav) return;
+    
+    // Find the corresponding carousel container (next sibling of nav)
+    const carousel = nav.nextElementSibling;
+    if (!carousel || !carousel.classList.contains('scenario-carousel-container')) return;
+    
+    // Hide all scenario contents within this carousel
+    const allScenarios = carousel.querySelectorAll('.scenario-content');
     allScenarios.forEach(scenario => {
         scenario.classList.remove('active');
     });
     
-    // Remove active class from all buttons
-    const allButtons = document.querySelectorAll('.scenario-btn');
+    // Remove active class from all buttons in this nav
+    const allButtons = nav.querySelectorAll('.scenario-btn');
     allButtons.forEach(btn => {
         btn.classList.remove('active');
     });
     
     // Show selected scenario
-    const selectedScenario = document.getElementById('scenario-' + scenarioId);
+    const selectedScenario = carousel.querySelector('#scenario-' + scenarioId);
     if (selectedScenario) {
         selectedScenario.classList.add('active');
     }
