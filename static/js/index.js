@@ -50,4 +50,24 @@ $(document).ready(function() {
     }, 100);
     
     bulmaSlider.attach();
+    
+    // Lazy loading for videos
+    const lazySources = document.querySelectorAll('source[data-src]');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                const source = video.querySelector('source');
+                if (source && source.dataset.src) {
+                    source.src = source.dataset.src;
+                    video.load();
+                    observer.unobserve(video);
+                }
+            }
+        });
+    });
+    lazySources.forEach(source => {
+        const video = source.parentElement;
+        observer.observe(video);
+    });
 })
