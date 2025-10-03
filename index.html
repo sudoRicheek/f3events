@@ -150,9 +150,9 @@
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+      <video poster="" id="tree" autoplay muted loop height="100%"> -->
         <!-- Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4"
+        <!-- <source src="static/videos/overview_combined.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -211,7 +211,7 @@
       </div>
 
       <div class="container" style="margin-top: 2rem;">
-        <p><strong>F<sup>3</sup> manages to realize the benefits of event cameras in low-latency and low-light scenarios, especially where standard RGB cameras struggle. </strong> Moving objects like pedestrians and vehicles are captured reliably in events even under challenging lighting conditions. See examples below:</p>
+        <p><strong>F<sup>3</sup> manages to realize the benefits of event cameras in low-latency and low-light scenarios, especially where standard RGB cameras struggle. </strong> Moving objects like pedestrians and vehicles are captured reliably in F<sup>3</sup> even under challenging lighting conditions. See cool examples below:</p>
       </div>
 
       <!-- Highlighted Scenarios -->
@@ -229,29 +229,35 @@
           <div id="scenario-pedestrians-highlighted" class="scenario-content active">
             <div class="carousel results-carousel">
               <div class="item">
-                <video poster="" id="night2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/night2.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
-                  <strong>Nighttime:</strong> Extreme low-light conditions
+                <h2 class="subtitle has-text-centered">
+                    <strong>Standard cameras fail to detect pedestrians crossing the road in low-light conditions</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="night2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/night2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
               
               <div class="item">
-                <video poster="" id="ucity1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/ucity1.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
-                  <strong>Urban Scene:</strong> University City
+                <h2 class="subtitle has-text-centered">
+                    <strong>Standard cameras fail to detect pedestrians hidden in the shadows cast by sidewalk trees</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="ucity1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/ucity1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
               <div class="item">
-                <video poster="" id="rittenhouse3" autoplay controls muted loop height="100%">
-                  <source src="static/videos/rittenhouse3.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
-                  <strong>Urban Scene:</strong> Rittenhouse Square - High dynamic range
+                <h2 class="subtitle has-text-centered">
+                  <strong>Standard cameras fail to detect pedestrians hidden in the shadows cast by buildings</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="rittenhouse3" autoplay controls muted loop height="100%">
+                    <source src="static/videos/rittenhouse3.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -259,30 +265,36 @@
           <div id="scenario-structure-motion-highlighted" class="scenario-content">
             <div class="carousel results-carousel">
               <div class="item">
-                <video poster="" id="rittenhouse2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/rittenhouse2.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
-                  <strong>Urban Scene:</strong> Rittenhouse Square - Dense pedestrian traffic
+                <h2 class="subtitle has-text-centered">
+                  <strong>F<sup>3</sup> prominently captures moving objects like bikes and pedestrians crossing the road</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="rittenhouse2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/rittenhouse2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
               
               <div class="item">
-                <video poster="" id="cityhall2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/cityhall2.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
-                  <strong>Urban Scene:</strong> City Hall - Complex urban intersection
+                <h2 class="subtitle has-text-centered">
+                    <strong>F<sup>3</sup> captures very subtle structure and motion details, such as the fine movements of pedestrians</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="cityhall2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/cityhall2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
               
               <div class="item">
-                <video poster="" id="highway1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/highway1.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered" style="font-size: 1.5em;">
-                  <strong>Highway Scene:</strong> High-speed driving scenario
+                <h2 class="subtitle has-text-centered">
+                    <strong>F<sup>3</sup> captures structure and motion even under difficult lighting and very high speeds (freeway) - distinctly segments the passing car and oncoming traffic</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="highway1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/highway1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -310,7 +322,10 @@
       <!-- Specific scenarios subsection -->
       <div class="container" style="margin-top: 3rem;">
         <h2 class="title is-3">F<sup>3</sup> is robust</h2>
-        <p style="margin-bottom: 2rem;">F<sup>3</sup>-based approaches work robustly without additional training across data from different robotic platforms, lighting and environmental conditions (daytime vs. night-time, indoors vs. outdoors, urban vs. off-road) and dynamic vision sensors (with different resolutions and event rates). <strong>See examples of F<sup>3</sup> generalizing to different</strong></p> 
+        <p style="margin-bottom: 2rem;">
+          F<sup>3</sup>-based approaches work robustly without additional training across data from different robotic platforms, lighting and environmental conditions (daytime vs. night-time, indoors vs. outdoors, urban vs. off-road) and dynamic vision sensors (with different resolutions and event rates). 
+          <strong>See examples of F<sup>3</sup> <span style="color: red;">(trained on daytime urban car driving sequences)</span> generalizing to different</strong>
+        </p></p>
         
         <!-- Scenario Navigation Buttons -->
         <div class="scenario-nav">
@@ -335,12 +350,14 @@
           <div id="scenario-lighting" class="scenario-content active">
             <div class="carousel results-carousel">
               <div class="item">
-                <video poster="" id="night1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/night1.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Nighttime:</strong> Low-light urban driving (demonstrates event camera advantages)
+                  <strong>F<sup>3</sup> accurately captures scene motion in an almost completely dark parking lot</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="night1" autoplay controls muted loop height="100%" width="100%">
+                    <source src="static/videos/night1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 <!-- 
               <div class="item">
@@ -353,12 +370,14 @@
               </div> -->
 
               <div class="item">
-                <video poster="" id="tunnel1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/tunnel1.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Tunnel:</strong> Rapid lighting transitions (high dynamic range)
+                  <strong>F<sup>3</sup> accurately captures the motion of oncoming traffic despite extreme lighting changes—generalizing to the high dynamic range capability of events</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="tunnel1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/tunnel1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -376,21 +395,25 @@
               </div> -->
 
               <div class="item">
-                <video poster="" id="forest2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/forest2.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Off-Road:</strong> Dense forest with complex motion patterns
+                  <strong>F<sup>3</sup> captures fine monocular depth and optical flow in a forest environment, despite being trained only on urban driving sequences</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="forest2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/forest2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="forest3" autoplay controls muted loop height="100%">
-                  <source src="static/videos/forest3.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Off-Road:</strong> Forest scene with challenging structure extraction
+                  <strong>The motion information in F<sup>3</sup> helps extract the correct flow and depth of the closer tree branches, which often get smeared with the background in RGB images</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="forest3" autoplay controls muted loop height="100%">
+                    <source src="static/videos/forest3.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -399,48 +422,58 @@
           <div id="scenario-robots" class="scenario-content">
             <div class="carousel results-carousel">
               <div class="item">
-                <video poster="" id="spot1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/spot1.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Platform:</strong> Spot Quadruped Robot (cross-platform generalization)
+                  <strong>F<sup>3</sup> can accurately capture the depth of an indoor cluttered environment from a quadruped robot</strong> 
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="spot1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/spot1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="spot2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/spot2.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Platform:</strong> Spot - Indoor navigation
+                  <strong>F<sup>3</sup> can capture the depth of fine structures in the stairwell of a building</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="spot2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/spot2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="spot3" autoplay controls muted loop height="100%">
-                  <source src="static/videos/spot3.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Platform:</strong> Spot - Complex indoor environment
+                  <strong>F<sup>3</sup> can capture the depth of skaters moving rapidly in a skatepark</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="spot3" autoplay controls muted loop height="100%">
+                    <source src="static/videos/spot3.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="falcon1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/falcon1.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Platform:</strong> Falcon Flying Platform (aerial perspective)
+                  <strong>F<sup>3</sup> can capture the sharp depth of indoor structures from a flying platform</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="falcon1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/falcon1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="falcon2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/falcon2.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>Platform:</strong> Falcon - Rapid motion and altitude changes
+                    <strong>F<sup>3</sup> can consistently estimate the depth of outdoor structures from a flying platform, even at very high speeds</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="falcon2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/falcon2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -449,39 +482,47 @@
           <div id="scenario-sensors" class="scenario-content">
             <div class="carousel results-carousel">
               <div class="item">
-                <video poster="" id="dsec1" autoplay controls muted loop height="100%">
-                  <source src="static/videos/dsec1.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>DSEC Dataset:</strong> Benchmark scenario 1
+                  <strong>F<sup>3</sup> generalizes to a different event camera with a different resolution and event rate</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="dsec1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/dsec1.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="dsec2" autoplay controls muted loop height="100%">
-                  <source src="static/videos/dsec2.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>DSEC Dataset:</strong> Benchmark scenario 2
+                  <strong>F<sup>3</sup> generalizes to a different event camera with a different resolution and event rate</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="dsec2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/dsec2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="dsec3" autoplay controls muted loop height="100%">
-                  <source src="static/videos/dsec3.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>DSEC Dataset:</strong> Benchmark scenario 3
+                  <strong>F<sup>3</sup> generalizes to a different event camera with a different resolution and event rate</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="dsec3" autoplay controls muted loop height="100%">
+                    <source src="static/videos/dsec3.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
 
               <div class="item">
-                <video poster="" id="dsec4" autoplay controls muted loop height="100%">
-                  <source src="static/videos/dsec4.mp4" type="video/mp4">
-                </video>
                 <h2 class="subtitle has-text-centered">
-                  <strong>DSEC Dataset:</strong> Benchmark scenario 4
+                  <strong>F<sup>3</sup> generalizes to a different event camera with a different resolution and event rate</strong>
                 </h2>
+                <div class="container is-max-desktop">
+                  <video poster="" id="dsec4" autoplay controls muted loop height="100%">
+                    <source src="static/videos/dsec4.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
             </div>
           </div>
