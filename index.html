@@ -16,9 +16,9 @@
 
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="F3: Fast Feature Field - A Predictive Representation of Events.">
+  <meta name="description" content="F3: Fast Feature Field - A General Predictive Representation of Events for Robot Perception.">
   <meta property="og:title" content="F3: Fast Feature Field"/>
-  <meta property="og:description" content="F3: Fast Feature Field - A Predictive Representation of Events"/>
+  <meta property="og:description" content="F3: Fast Feature Field - A General Predictive Representation of Events for Robot Perception"/>
   <meta property="og:url" content="https://seas.upenn.edu/~richeek/f3"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/your_banner_image.png" />
@@ -64,7 +64,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Fast Feature Field (F<sup>3</sup>): A Predictive Representation of Events</h1>
+            <h1 class="title is-1 publication-title">Fast Feature Field (F<sup>3</sup>): A General Predictive Representation of Events for Robot Perception</h1>
+            <!-- Venue -->
+            <div class="publication-journal">
+              <a href="https://www.science.org/doi/10.1126/scirobotics.aec8218" target="_blank"><span class="journal-science">Science</span><span class="journal-robotics">Robotics</span></a>
+            </div>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -84,9 +88,9 @@
                   <div class="column has-text-centered">
                     <div class="publication-links">
 
-                      <!-- Arxiv PDF link -->
+                      <!-- Paper link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2509.25146.pdf" target="_blank"
+                        <a href="https://www.science.org/doi/10.1126/scirobotics.aec8218" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -139,6 +143,11 @@
                     </a>
                   </span>
             </div>
+
+            <!-- TL;DR -->
+            <p class="publication-tldr is-size-5">
+              <strong>TL;DR:</strong> A fast event camera representation that enables robust perception across different robotic platforms, environments, and sensors.
+            </p>
           </div>
         </div>
       </div>
@@ -632,15 +641,23 @@
 <hr>
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{das2025fastfeaturefield,
-  title={Fast Feature Field ($\text{F}^3$): A Predictive Representation of Events}, 
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="button is-small is-rounded is-dark" onclick="copyBibtex()">
+          <span class="icon"><i class="fas fa-copy"></i></span>
+          <span id="copy-bibtex-label">Copy</span>
+        </button>
+      </div>
+      <pre><code id="bibtex-code">@article{das2026fastfeaturefield,
+  title={Fast Feature Field ($\text{F}^3$): A general predictive representation of events for robot perception},
   author={Richeek Das and Kostas Daniilidis and Pratik Chaudhari},
-  year={2025},
-  eprint={2509.25146},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2509.25146},
+  journal={Science Robotics},
+  volume={11},
+  number={119},
+  pages={eaec8218},
+  year={2026},
+  doi={10.1126/scirobotics.aec8218},
+  url={https://www.science.org/doi/10.1126/scirobotics.aec8218},
 }</code></pre>
     </div>
 </section>

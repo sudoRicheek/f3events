@@ -61,6 +61,46 @@ body {
     font-weight: bold;
 }
 
+.publication-journal {
+    font-family: 'Times New Roman', Times, Tinos, 'Liberation Serif', serif;
+    font-size: 3rem;
+    line-height: 1;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.publication-journal a {
+    text-decoration: none;
+}
+
+.journal-science {
+    color: #c72326;
+    letter-spacing: -0.04em;
+}
+
+.journal-robotics {
+    color: #000;
+    letter-spacing: -0.01em;
+}
+
+.publication-tldr {
+    font-family: 'Google Sans', sans-serif;
+    color: #4a4a4a;
+    max-width: 720px;
+    margin: 1.5rem auto 0;
+}
+
+.bibtex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bibtex-header .title {
+    margin-bottom: 0 !important;
+}
+
 .publication-awards {
     color: #ff3860;
     width: fit-content;
@@ -354,6 +394,10 @@ body {
   .scenario-nav {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .publication-journal {
+    font-size: 2.5rem;
   }
 }
 

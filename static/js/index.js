@@ -32,6 +32,16 @@ function showScenario(scenarioId) {
     event.target.classList.add('active');
 }
 
+// Copy BibTeX to clipboard
+function copyBibtex() {
+    const text = document.getElementById('bibtex-code').textContent;
+    const label = document.getElementById('copy-bibtex-label');
+    navigator.clipboard.writeText(text).then(() => {
+        label.textContent = 'Copied!';
+        setTimeout(() => { label.textContent = 'Copy'; }, 2000);
+    });
+}
+
 $(document).ready(function() {
     var options = {
         slidesToScroll: 1,
